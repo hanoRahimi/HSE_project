@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSE Project</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleShowBtn.css" />
+
+    <link rel="icon" type="image/x-icon" href="/media/hseIcon.ico">
+
+    <!--Font Awesome Cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img class="img-logo" src="/media/kafrizHSELOGO.png" />
+        </div>
+        <ul class="menu">
+            <li>
+                <a href="Home_view.html">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="Personnel_view.html">
+                    <i class="fas fa-user"></i>
+                    <span>Personnel</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Statistics</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Careers</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-question-circle"></i>
+                    <span>FAQ</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-star"></i>
+                    <span>Testimonials</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+            <li class="logout">
+                <a href="#">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="contetbody">
+
+        <!--Header-->
+        <div class="main--content">
+            <div class="header--wrapper">
+                <div class="header--title">
+                    <span>HSE</span>
+                    <h2>Personnel</h2>
+                </div>
+                <div class="user--info">
+                    <div class="search--box">
+                        <i class="fa-solid fa-search"></i>
+                        <input type="text" placeholder="Search" />
+                    </div>
+                    <img src="/media/Avatar.png" alt="" />
+                </div>
+            </div>
+        </div>
+
+        <!--Buttons create Personnel and category-->
+        <div class="button-personnel">
+            <button id="createPersonelBtn">
+                <span>ایجاد پرسنل</span>
+                <svg viewBox="-5 -5 110 110" preserveAspectRatio="none" aria-hidden="true">
+                    <path d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0" />
+                </svg>
+            </button>
+        </div>
+
+
+        <!--Table Personnel-->
+        <div class="container">
+            <div class="table-wrapper">
+                <div class="table">
+                    <div class="table-header">
+                        <div class="header__item"><a id="id" class="filter__link" href="#" onclick="sortTable(0)">ID</a>
+                        </div>
+                        <div class="header__item"><a id="name" class="filter__link filter__link--number" href="#"
+                                onclick="sortTable(1)">نام و نام خانوادگی</a></div>
+                        <div class="header__item"><a id="age" class="filter__link filter__link--number" href="#"
+                                onclick="sortTable(2)">سن</a></div>
+                        <div class="header__item"><a id="dateEmplo" class="filter__link filter__link--number" href="#"
+                                onclick="sortTable(3)">تاریخ استخدام</a></div>
+                        <div class="header__item"><a id="level" class="filter__link filter__link--number" href="#"
+                                onclick="sortTable(4)">سمت</a></div>
+                        <div class="header__item"><a id="total" class="filter__link filter__link--number" href="#"
+                                onclick="sortTable(5)">توضیحات</a></div>
+                    </div>
+
+                    <div class="table-content">
+                        <div class="table-row">
+                            <div class="table-data">1</div>
+                            <div class="table-data">Tom</div>
+                            <div class="table-data">30</div>
+                            <div class="table-data">2020-01-01</div>
+                            <div class="table-data">Manager</div>
+                            <div class="table-data">5</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-data">2</div>
+                            <div class="table-data">Jan</div>
+                            <div class="table-data">25</div>
+                            <div class="table-data">2019-05-15</div>
+                            <div class="table-data">Engineer</div>
+                            <div class="table-data">5</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-data">3</div>
+                            <div class="table-data">Sam</div>
+                            <div class="table-data">35</div>
+                            <div class="table-data">2018-08-20</div>
+                            <div class="table-data">Technician</div>
+                            <div class="table-data">2</div>
+                        </div>
+                        <div class="table-content">
+                            <div class="table-row">
+                                <div class="table-data">1</div>
+                                <div class="table-data">Tom</div>
+                                <div class="table-data">30</div>
+                                <div class="table-data">2020-01-01</div>
+                                <div class="table-data">Manager</div>
+                                <div class="table-data">5</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">2</div>
+                                <div class="table-data">Jan</div>
+                                <div class="table-data">25</div>
+                                <div class="table-data">2019-05-15</div>
+                                <div class="table-data">Engineer</div>
+                                <div class="table-data">5</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">3</div>
+                                <div class="table-data">Sam</div>
+                                <div class="table-data">35</div>
+                                <div class="table-data">2018-08-20</div>
+                                <div class="table-data">Technician</div>
+                                <div class="table-data">2</div>
+                            </div>
+                            <div class="table-content">
+                                <div class="table-row">
+                                    <div class="table-data">1</div>
+                                    <div class="table-data">Tom</div>
+                                    <div class="table-data">30</div>
+                                    <div class="table-data">2020-01-01</div>
+                                    <div class="table-data">Manager</div>
+                                    <div class="table-data">5</div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="table-data">2</div>
+                                    <div class="table-data">Jan</div>
+                                    <div class="table-data">25</div>
+                                    <div class="table-data">2019-05-15</div>
+                                    <div class="table-data">Engineer</div>
+                                    <div class="table-data">5</div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="table-data">3</div>
+                                    <div class="table-data">Sam</div>
+                                    <div class="table-data">35</div>
+                                    <div class="table-data">2018-08-20</div>
+                                    <div class="table-data">Technician</div>
+                                    <div class="table-data">2</div>
+                                </div>
+                                <div class="table-content">
+                                    <div class="table-row">
+                                        <div class="table-data">1</div>
+                                        <div class="table-data">Tom</div>
+                                        <div class="table-data">30</div>
+                                        <div class="table-data">2020-01-01</div>
+                                        <div class="table-data">Manager</div>
+                                        <div class="table-data">5</div>
+                                    </div>
+                                    <div class="table-row">
+                                        <div class="table-data">2</div>
+                                        <div class="table-data">Jan</div>
+                                        <div class="table-data">25</div>
+                                        <div class="table-data">2019-05-15</div>
+                                        <div class="table-data">Engineer</div>
+                                        <div class="table-data">5</div>
+                                    </div>
+                                    <div class="table-row">
+                                        <div class="table-data">3</div>
+                                        <div class="table-data">Sam</div>
+                                        <div class="table-data">35</div>
+                                        <div class="table-data">2018-08-20</div>
+                                        <div class="table-data">Technician</div>
+                                        <div class="table-data">2</div>
+                                    </div>
+                                    <div class="table-content">
+                                        <div class="table-row">
+                                            <div class="table-data">1</div>
+                                            <div class="table-data">Tom</div>
+                                            <div class="table-data">30</div>
+                                            <div class="table-data">2020-01-01</div>
+                                            <div class="table-data">Manager</div>
+                                            <div class="table-data">5</div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-data">2</div>
+                                            <div class="table-data">Jan</div>
+                                            <div class="table-data">25</div>
+                                            <div class="table-data">2019-05-15</div>
+                                            <div class="table-data">Engineer</div>
+                                            <div class="table-data">5</div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-data">3</div>
+                                            <div class="table-data">Sam</div>
+                                            <div class="table-data">35</div>
+                                            <div class="table-data">2018-08-20</div>
+                                            <div class="table-data">Technician</div>
+                                            <div class="table-data">2</div>
+                                        </div>
+                                        <div class="table-content">
+                                            <div class="table-row">
+                                                <div class="table-data">1</div>
+                                                <div class="table-data">Tom</div>
+                                                <div class="table-data">30</div>
+                                                <div class="table-data">2020-01-01</div>
+                                                <div class="table-data">Manager</div>
+                                                <div class="table-data">5</div>
+                                            </div>
+                                            <div class="table-row">
+                                                <div class="table-data">2</div>
+                                                <div class="table-data">Jan</div>
+                                                <div class="table-data">25</div>
+                                                <div class="table-data">2019-05-15</div>
+                                                <div class="table-data">Engineer</div>
+                                                <div class="table-data">5</div>
+                                            </div>
+                                            <div class="table-row">
+                                                <div class="table-data">3</div>
+                                                <div class="table-data">Sam</div>
+                                                <div class="table-data">35</div>
+                                                <div class="table-data">2018-08-20</div>
+                                                <div class="table-data">Technician</div>
+                                                <div class="table-data">2</div>
+                                            </div>
+                                            <!-- سایر ردیف‌ها -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay">
+        <div id="formContainer">
+            <div class="formbold-main-wrapper">
+                <div class="formbold-form-wrapper">
+                    <form action="https://formbold.com/s/FORM_ID" method="POST">
+                        <div class="formbold-steps">
+                            <ul>
+                                <li class="formbold-step-menu1 active" style="">
+                                    <span>1</span>
+                                    اطلاعات پرسنل
+                                </li>
+                                <li class="formbold-step-menu2">
+                                    <span>2</span>
+                                    پرونده بهداشت
+                                </li>
+                                <li class="formbold-step-menu3">
+                                    <span>3</span> 
+                                    تائید
+                                </li> 
+                            </ul>
+                        </div>
+
+                        <div class="formbold-form-step-1 active">
+                            <div class="formbold-input-flex">
+                                <div dir="rtl">
+                                    <label for="firstname" class="formbold-form-label"> نام خانوادگی </label>
+                                    <input type="text" name="firstname" placeholder="علوی" id="firstname" class="formbold-form-input" />
+                                </div>
+                                <div dir="rtl">
+                                    <label for="lastname" class="formbold-form-label"> نام </label>
+                                    <input type="text" name="lastname" placeholder="علی" id="lastname" class="formbold-form-input" />
+                                </div>
+                            </div>
+
+                            <div class="formbold-input-flex">
+                                <div dir="rtl">
+                                    <label for="dob" class="formbold-form-label"> تاریخ تولد </label>
+                                    <input type="date" name="dob" id="dob" class="formbold-form-input" />
+                                </div>
+                                <div dir="rtl">
+                                    <label for="email" class="formbold-form-label"> سمت </label>
+                                    <input type="email" name="email" placeholder="کارشناس" id="email" class="formbold-form-input" />
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="address" class="formbold-form-label"> Address </label>
+                                <input type="text" name="address" id="address" placeholder="Flat 4, 24 Castle Street, Perth, PH1 3JY" class="formbold-form-input" />
+                            </div>
+                        </div>
+
+                        <div class="formbold-form-step-2">
+                            <div>
+                                <label for="message" class="formbold-form-label"> Message </label>
+                                <textarea rows="6" name="message" id="message" placeholder="Type your message" class="formbold-form-input"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="formbold-form-step-3">
+                            <div class="formbold-form-confirm">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                                </p>
+
+                                <div>
+                                    <button class="formbold-confirm-btn active">
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="11" cy="11" r="10.5" fill="white" stroke="#DDE3EC"/>
+                                            <g clip-path="url(#clip0_1667_1314)">
+                                                <path d="M9.83343 12.8509L15.1954 7.48828L16.0208 8.31311L9.83343 14.5005L6.12109 10.7882L6.94593 9.96336L9.83343 12.8509Z" fill="#536387"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_1667_1314">
+                                                    <rect width="14" height="14" fill="white" transform="translate(4 4)"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        Yes! I want it.
+                                    </button>
+
+                                    <button class="formbold-confirm-btn">
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="11" cy="11" r="10.5" fill="white" stroke="#DDE3EC"/>
+                                            <g clip-path="url(#clip0_1667_1314)">
+                                                <path d="M9.83343 12.8509L15.1954 7.48828L16.0208 8.31311L9.83343 14.5005L6.12109 10.7882L6.94593 9.96336L9.83343 12.8509Z" fill="#536387"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_1667_1314">
+                                                    <rect width="14" height="14" fill="white" transform="translate(4 4)"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        No! I don’t want it.
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="formbold-form-btn-wrapper">
+                            <button class="formbold-back-btn">
+                                Back
+                            </button>
+
+                            <button class="formbold-btn">
+                                Next Step
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1675_1807)">
+                                        <path d="M10.7814 7.33312L7.20541 3.75712L8.14808 2.81445L13.3334 7.99979L8.14808 13.1851L7.20541 12.2425L10.7814 8.66645H2.66675V7.33312H10.7814Z" fill="white"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1675_1807">
+                                            <rect width="16" height="16" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('createPersonelBtn').addEventListener('click', function () {
+            document.getElementById('overlay').style.display = 'flex';
+            document.getElementById('formContainer').style.display = 'block';
+        });
+
+        const stepMenuOne = document.querySelector('.formbold-step-menu1')
+        const stepMenuTwo = document.querySelector('.formbold-step-menu2')
+        const stepMenuThree = document.querySelector('.formbold-step-menu3')
+
+        const stepOne = document.querySelector('.formbold-form-step-1')
+        const stepTwo = document.querySelector('.formbold-form-step-2')
+        const stepThree = document.querySelector('.formbold-form-step-3')
+
+        const formSubmitBtn = document.querySelector('.formbold-btn')
+        const formBackBtn = document.querySelector('.formbold-back-btn')
+
+        formSubmitBtn.addEventListener("click", function (event) {
+            event.preventDefault()
+            if (stepMenuOne.className == 'formbold-step-menu1 active') {
+                event.preventDefault()
+
+                stepMenuOne.classList.remove('active')
+                stepMenuTwo.classList.add('active')
+
+                stepOne.classList.remove('active')
+                stepTwo.classList.add('active')
+
+                formBackBtn.classList.add('active')
+                formBackBtn.addEventListener("click", function (event) {
+                    event.preventDefault()
+
+                    stepMenuOne.classList.add('active')
+                    stepMenuTwo.classList.remove('active')
+
+                    stepOne.classList.add('active')
+                    stepTwo.classList.remove('active')
+
+                    formBackBtn.classList.remove('active')
+
+                })
+
+            } else if (stepMenuTwo.className == 'formbold-step-menu2 active') {
+                event.preventDefault()
+
+                stepMenuTwo.classList.remove('active')
+                stepMenuThree.classList.add('active')
+
+                stepTwo.classList.remove('active')
+                stepThree.classList.add('active')
+
+                formBackBtn.classList.remove('active')
+                formSubmitBtn.textContent = 'Submit'
+            } else if (stepMenuThree.className == 'formbold-step-menu3 active') {
+                document.querySelector('form').submit()
+            }
+        })
+    </script>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
